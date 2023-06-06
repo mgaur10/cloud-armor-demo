@@ -56,6 +56,9 @@ output "_8_owasp_http_splitting__command" {
   value = module.cloud_armor._8_owasp_http_splitting__command
 }
 
+  ## To troubleshoot session fixation
+  /*
 output "_9_owasp_session_fixation__command" {
   value = module.cloud_armor._9_owasp_session_fixation__command
 }
+  */
