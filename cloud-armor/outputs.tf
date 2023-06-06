@@ -55,7 +55,7 @@ output "_8_owasp_http_splitting__command" {
 }
 
 output "_9_owasp_session_fixation__command" {
-  value = "curl -Ii http://${google_compute_global_address.juice_shop.address} -H session_id=X"
+  value = "curl -Ii http://${google_compute_global_address.juice_shop.address}/?session_id=xxx"
 }
 
 
