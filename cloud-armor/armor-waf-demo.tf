@@ -310,7 +310,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "8000"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('cve-canary', {'sensitivity': 2})"
+        expression = "evaluatePreconfiguredWaf('cve-canary', {'sensitivity': 3})"
       }
     }
     description = "block Log4j vulnerability attack"
@@ -321,7 +321,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9000"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('sqli-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('sqli-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block sql injection attack"
@@ -332,7 +332,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9001"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('lfi-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('lfi-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block local file inclusion"
@@ -343,7 +343,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9002"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('rce-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('rce-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block remote code execution attacks"
@@ -354,7 +354,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9003"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('protocolattack-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('protocolattack-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block http protocol attacks"
@@ -365,7 +365,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9004"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('sessionfixation-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('sessionfixation-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block session fixation attacks"
@@ -376,7 +376,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9005"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('xss-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('xss-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block cross-site scripting attacks"
@@ -387,7 +387,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9006"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('rfi-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('rfi-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block remote file inclusion attacks"
@@ -398,7 +398,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9007"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('methodenforcement-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('methodenforcement-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block method enforcement	attacks"
@@ -409,7 +409,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9008"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('php-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('php-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block PHP injection attack attacks"
@@ -420,7 +420,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9009"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('scannerdetection-v33-stable', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('scannerdetection-v33-stable', {'sensitivity': 3})"
       }
     }
     description = "block scanner detection"
@@ -431,7 +431,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     priority = "9010"
     match {
       expr {
-        expression = "evaluatePreconfiguredWaf('json-sqli-canary', {'sensitivity': 1})"
+        expression = "evaluatePreconfiguredWaf('json-sqli-canary', {'sensitivity': 3})"
       }
     }
     description = "block JSON-based SQL injection bypass vulnerability attack"
@@ -443,7 +443,7 @@ resource "google_compute_security_policy" "block_modsec_crs" {
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
-        src_ip_ranges = ["0.0.0.0"]
+        src_ip_ranges = ["*"]
       }
     }
 
