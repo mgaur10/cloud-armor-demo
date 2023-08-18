@@ -37,7 +37,7 @@ Follow the steps in [this guide](https://cloud.google.com/resource-manager/docs/
 Clone this github repository go to the root of the repository.
 
 ``` 
-git clone http://github.com/GoogleCloudPlatform/cloud-armor-demo
+git clone https://github.com/mgaur10/cloud-armor-demo.git
 cd cloud-armor-demo
 ```
 
